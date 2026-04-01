@@ -1,8 +1,12 @@
+import bannerImg from "../assets/banner.png";
+import playIcon from "../assets/Play.png";
+
 const Banner = () => {
   return (
     <>
       <section className="bg-white pt-14 pb-12 px-6 md:px-10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+          {/* Left Content */}
           <div className="flex-1 text-left max-w-xl">
             <div className="inline-flex items-center gap-2 bg-purple-50 border border-purple-200 text-purple-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
               <span className="w-2 h-2 rounded-full bg-[#6C3AED]"></span>
@@ -27,21 +31,18 @@ const Banner = () => {
                 Explore Products
               </button>
 
-              <button className="btn btn-outline rounded-full px-7 text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-300 font-semibold text-sm gap-2">
-                <img
-                  src="/src/assets/Play.png"
-                  alt=""
-                />
+              <button className="btn btn-outline rounded-full px-7 text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-300 font-semibold text-sm flex items-center gap-2">
+                <img src={playIcon} alt="Play" className="w-4 h-4" />
                 Watch Demo
               </button>
             </div>
           </div>
 
-          
+          {/* Right Image */}
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative w-full max-w-md">
               <img
-                src="/src/assets/banner.png"
+                src={bannerImg}
                 alt="Digital Tools"
                 className="w-full rounded-2xl object-cover"
               />
@@ -50,19 +51,23 @@ const Banner = () => {
         </div>
       </section>
 
-     
+      {/* Stats Section */}
       <section className="bg-linear-to-r from-[#6C3AED] to-[#9B59F5] py-8 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-around items-center gap-6 text-center text-white">
           <div>
             <h3 className="text-3xl font-extrabold">50K+</h3>
             <p className="text-purple-200 text-sm mt-1">Active Users</p>
           </div>
+
           <div className="hidden md:block w-px h-10 bg-white/20"></div>
+
           <div>
             <h3 className="text-3xl font-extrabold">200+</h3>
             <p className="text-purple-200 text-sm mt-1">Premium Tools</p>
           </div>
+
           <div className="hidden md:block w-px h-10 bg-white/20"></div>
+
           <div>
             <h3 className="text-3xl font-extrabold">4.9</h3>
             <p className="text-purple-200 text-sm mt-1">Rating</p>
